@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>Owner List</mat-card-title>
+  <mat-card-content>
+      <mat-list>
+          <mat-list-item *ngFor="let item of owners; let i = index">
+              <mat-checkbox (change)="select(i)" style="margin-right: 1em;"></mat-checkbox>
+              {{item?.name}}
+              <button mat-flat-button style="margin-left: 10px; background-color: blue; color: white;" [routerLink]="['/owner-edit', item.dni]">
+                  Editar</button>
+          </mat-list-item>
+      </mat-list>
+  </mat-card-content>
+  <button mat-fab style="margin-right: 10px; background-color: blue;" [routerLink]="['/owner-add']">Agregar</button>
+  <button mat-fab style="background-color: blue;" (click)='delete()'>Eliminar</button>
+</mat-card>

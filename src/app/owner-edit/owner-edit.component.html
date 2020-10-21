@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-content>
+      <form class="example-form" [formGroup]="owner">
+          <mat-form-field class="example-full-width">
+              <mat-label>Nombre</mat-label>
+              <input matInput formControlName="name">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+              <mat-label>Dni</mat-label>
+              <textarea matInput formControlName="dni"></textarea>
+          </mat-form-field><br>
+          <mat-form-field class="example-full-width">
+              <mat-label>Profesión</mat-label>
+              <textarea matInput formControlName="profession"></textarea>
+          </mat-form-field>
+      </form>
+  </mat-card-content>
+  <mat-card-footer>
+      <button mat-raised-button style="margin: 1em;" (click)="save()" *ngIf="!creation" color="primary">Save</button>
+      <button mat-raised-button style="margin: 1em;" (click)="create()" *ngIf="creation" color="primary">Create</button>
+  </mat-card-footer>
+</mat-card>

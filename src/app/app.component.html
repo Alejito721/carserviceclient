@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <div class="row">
+    <span class="col-10"  [routerLink]="['/car-list']">Welcome to {{title}}!</span>
+    <input class="col-10 margin-left" type="button" [routerLink]="['/owner-list']" value="Owner list">
+  </div>
+
+
+</mat-toolbar>
+
+<router-outlet></router-outlet>
