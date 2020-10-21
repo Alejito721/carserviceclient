@@ -25,14 +25,6 @@ export class CarListComponent implements OnInit {
 
   }
 
-  /*searchOwner(id: string) {
-    for (let index = 0; index < this.owners.length; index++) {
-      const element = this.owners[index]["dni"];
-      if (element == id) {
-        this.owner.push(this.owners[index]["name"]);
-      }
-    }
-  }*/
   obtenerCars(){
     this.carService.getAll().subscribe(data => {
       this.cars = data;
